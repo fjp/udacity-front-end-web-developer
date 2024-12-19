@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <meta
+            name="description"
+            content="My personal blog website for the Udacity course: Front End Web Developer." />
+
+        <link rel="icon" href="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"/>
+        <title>Franz' personal blog website</title>
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1>Franz' personal blog</h1>
+                <div>
+                    <svg class="search-icon" viewBox="0 0 32 32" width="40" height="40"></svg>
+                </div>
+            </header>
+
+            <nav class="nav-bar">
+                <div><a href="index.html">Home</a></div>
+                <div><a href="#subscribe">Subscribe</a></div>
+                <div><a href="static/about.html">About</a></div>
+            </nav>
+
+            <main class="cards">
+                <!-- Card 1 -->
+                <div id="one" class="card">
+                    <div class="card-header blue"><h1>ROS</h1></div>
+                    <div class="card-title">ROS Mobile Robots</div>
+                    <div class="card-date">Nov 15</div>
+                    <div class="card-body">
+                        Build your own mobile robot using ROS and 3D printed chassis that can mount a 2D laser scanner.
+                    </div>
+                    <div class="card-image">
+                        <img src="assets/remo_front_side.jpg">
+                    </div>
+                    <a class="card-continue-link" href="static/page-robot.html">Continue reading</a>
+                </div>
+                <!-- Card 2 -->
+                <div id="two" class="card">
+                    <div class="card-header blue"><h1>Drone</h1></div>
+                    <div class="card-title">Racing drone</div>
+                    <div class="card-date">Nov 17</div>
+                    <div class="card-body">
+                        Build your own racing drone and learn how to fly it.
+                    </div>
+                    <div class="card-image">
+                        <img src="assets/part-placement-side.jpg">
+                    </div>
+                    <a class="card-continue-link" href="static/page-drone.html">Continue reading</a>
+                </div>
+            </main>
+
+            <footer class="footer">
+                <h2 class="subscribe-title">Subscribe</h2>
+                <div id="subscribe">
+                    <form>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Your email..">
+                    
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+                <h3>Copyright 2025</h3>
+            </footer>
+
+        </div>
+        
+    </body>
+</html>

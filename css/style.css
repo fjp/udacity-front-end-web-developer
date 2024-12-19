@@ -1,0 +1,126 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 4);
+    grid-template-areas: 
+        "head"
+        "nav"
+        "cards"
+        "ft";
+    display: grid;
+    grid-gap: 15px;
+}
+
+.header {
+    grid-area: head;
+    color: burlywood;
+}
+
+.nav-bar {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav-bar div {
+    /* Add styles for the navigation items */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Optional hover effect */
+.nav-bar div:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+    display: grid;
+    grid-gap: 15px;
+    grid-area: cards;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    /* grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) */
+}
+
+.card {
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 1%;
+    gap: 5px;
+    padding: 5px;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "card-header card-header"
+        "card-title card-image"
+        "card-date card-image"
+        "card-body card-image"
+        "card-footer card-image";
+}
+
+.card-header {
+    grid-area: card-header;
+}
+
+.card-title {
+    grid-area: card-title;
+}
+
+.card-date {
+    grid-area: card-date;
+}
+
+.card-body {
+    grid-area: card-body;
+}
+
+.card-image {
+    grid-area: card-image;
+}
+
+.card-continue-link {
+    grid-area: card-footer;
+}
+
+.footer {
+    grid-area: ft;
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* if screen is wide enough */
+@media(min-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1fr 4);
+        grid-template-areas: 
+            "head head"
+            "nav nav"
+            "cards cards"
+            "ft ft";
+    }
+
+    .nav-bar {
+        flex-direction: row;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(100px, auto);
+        /* grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) */
+    }
+}
