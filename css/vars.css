@@ -1,0 +1,9 @@
+/* Base styles and CSS reset */
+:root {
+    --primary-color: #2a4494;
+    --secondary-color: #bfa88b;
+    --text-color: #333;
+    --background-color: #f5f5f5;
+    --card-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    --spacing-unit: 1rem;
+}

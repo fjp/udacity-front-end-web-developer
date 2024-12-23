@@ -9,30 +9,73 @@
 
         <link rel="icon" href="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"/>
         <title>Franz' personal blog website</title>
-        <link rel="stylesheet" href="../css/page.css" />
+        <link rel="stylesheet" href="../css/about.css" />
     </head>
 
     <body>
-        <div class="container">
-            <div class="header box"><h1>This is me</h1></div>
-            <div class="content box">
-                Hi my name is Franz.
+        <div class="page-container">
+            <header class="header">
+                <h1>About Me</h1>
+                <nav class="page-nav-bar">
+                    <a href="../index.html" class="page-nav-link">← Back to Home</a>
+                </nav>
+            </header>
 
-                Write me a message:
+            <main class="content">
+                <section class="about-section">
+                    <h2>Hi, I'm Franz</h2>
+                    <img src="../assets/profile-photo.jpg" alt="Franz" class="author-image">
+                    <p>
+                        I'm passionate about robotics and automation, specializing in ROS development
+                        and drone building. Through this blog, I share my experiences and knowledge
+                        to help others in their robotics journey.
+                    </p>
+                </section>
 
-                <form action="/action_page.php">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <section class="contact-section">
+                    <h2>Get in Touch</h2>
+                    <form class="contact-form" action="/action_page.php" method="POST">
+                        <div class="form-group">
+                            <label for="fname">Name</label>
+                            <input 
+                                type="text" 
+                                id="fname" 
+                                name="firstname" 
+                                placeholder="Your name"
+                                required
+                            >
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="Your email"
+                                required
+                            >
+                        </div>
                 
-                    <label for="message">Message</label>
-                    <input type="text" id="message" name="message" placeholder="Your message..">
-                  
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
-            <div class="footer box"></div>
-                <a href=../index.html>Go back home</a>
-            </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                placeholder="Your message"
+                                rows="4"
+                                required
+                            ></textarea>
+                        </div>
+                      
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <small>&copy; 2025 Franz' Robotics Blog. All rights reserved.</small>
+            </footer>
         </div>
     </body>
 </html>

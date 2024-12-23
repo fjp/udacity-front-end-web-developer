@@ -1,0 +1,45 @@
+@import url("page.css");
+
+.about-section {
+    margin-bottom: 3rem;
+}
+
+.contact-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+.form-group {
+    display: grid;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 500;
+}
+
+input,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(42, 68, 148, 0.1);
+}

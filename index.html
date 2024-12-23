@@ -16,60 +16,74 @@
         <div class="container">
             <header class="header">
                 <h1>Franz' personal blog</h1>
-                <div>
-                    <svg class="search-icon" viewBox="0 0 32 32" width="40" height="40"></svg>
-                </div>
+                <form class="search-form" role="search">
+                    <input type="search" aria-label="Search blog posts" placeholder="Search posts...">
+                    <button type="submit" aria-label="Submit search">
+                        <svg class="search-icon" viewBox="0 0 32 32" width="20" height="20">
+                            <path d="M19.4271164,21.4271164 C18.0372495,22.4174803 16.3366522,23 14.5,23 C9.80557939,23 6,19.1944206 6,14.5 C6,9.80557939 9.80557939,6 14.5,6 C19.1944206,6 23,9.80557939 23,14.5 C23,16.3366522 22.4174803,18.0372495 21.4271164,19.4271164 L27.0119176,25.0119176 C27.5621186,25.5621186 27.5575313,26.4424687 27.0117185,26.9882815 L26.9882815,27.0117185 C26.4438648,27.5561352 25.5576204,27.5576204 25.0119176,27.0119176 L19.4271164,21.4271164 L19.4271164,21.4271164 Z M14.5,21 C18.0898511,21 21,18.0898511 21,14.5 C21,10.9101489 18.0898511,8 14.5,8 C10.9101489,8 8,10.9101489 8,14.5 C8,18.0898511 10.9101489,21 14.5,21 L14.5,21 Z"/>
+                        </svg>
+                    </button>
+                </form>
             </header>
 
             <nav class="nav-bar">
-                <div><a href="index.html">Home</a></div>
-                <div><a href="#subscribe">Subscribe</a></div>
-                <div><a href="static/about.html">About</a></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#subscribe">Subscribe</a></li>
+                    <li><a href="static/about.html">About</a></li>
+                </ul>
             </nav>
 
             <main class="cards">
                 <!-- Card 1 -->
-                <div id="one" class="card">
-                    <div class="card-header blue"><h1>ROS</h1></div>
-                    <div class="card-title">ROS Mobile Robots</div>
-                    <div class="card-date">Nov 15</div>
-                    <div class="card-body">
-                        Build your own mobile robot using ROS and 3D printed chassis that can mount a 2D laser scanner.
+                <article class="card">
+                    <header class="card-header">
+                        <h2>ROS Mobile Robots</h2>
+                        <time datetime=""2024-11-15">Nov 15</time>
+                    </header>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/remo_front_side.jpg">
+                        </div>
+                        <p>Build your own mobile robot using ROS and 3D printed chassis that can mount a 2D laser scanner.</p>
+                        <a href="static/page-robot.html" class="button">Continue reading</a>
                     </div>
-                    <div class="card-image">
-                        <img src="assets/remo_front_side.jpg">
-                    </div>
-                    <a class="card-continue-link" href="static/page-robot.html">Continue reading</a>
-                </div>
+                </article>
+
                 <!-- Card 2 -->
-                <div id="two" class="card">
-                    <div class="card-header blue"><h1>Drone</h1></div>
-                    <div class="card-title">Racing drone</div>
-                    <div class="card-date">Nov 17</div>
-                    <div class="card-body">
-                        Build your own racing drone and learn how to fly it.
+                <article class="card">
+                    <header class="card-header">
+                        <h2>Racing Drone Build Guide</h2>
+                        <time datetime=""2024-11-17">Nov 17</time>
+                    </header>
+                    <div class="card-content">
+                        <div class="card-image">
+                            <img src="assets/part-placement-side.jpg">
+                        </div>
+                        <p>Build your own racing drone and learn how to fly it.</p>
+                        <a href="static/page-drone.html" class="button">Continue reading</a>
                     </div>
-                    <div class="card-image">
-                        <img src="assets/part-placement-side.jpg">
-                    </div>
-                    <a class="card-continue-link" href="static/page-drone.html">Continue reading</a>
-                </div>
+                </article>
             </main>
 
             <footer class="footer">
-                <h2 class="subscribe-title">Subscribe</h2>
-                <div id="subscribe">
-                    <form>
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                    
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Your email..">
-                    
-                        <input type="submit" value="Subscribe">
+                <section id="subscribe" class="subscribe-section">
+                    <h2>Stay Updated</h2>
+                    <form class="subscribe-form" method="POST">
+                        <div class="form-group">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" required placeholder="Your name.." aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Your email.." aria-required="true">
+                        </div>
+
+                        <button type="submit" class="button">Subscribe</button>
                     </form>
-                </div>
-                <h3>Copyright 2025</h3>
+                </section>
+                <small>&copy; 2025 Franz' Robotics Blog. All rights reserved</small>
             </footer>
 
         </div>
