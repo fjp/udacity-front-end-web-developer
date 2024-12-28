@@ -163,4 +163,4 @@ If you'd like to contribute, please fork the repository and make changes as you'
 
 ## 📞 Support
 
-For support, email [your email] or create an issue in the repository.
+For support, create an issue in the repository.
